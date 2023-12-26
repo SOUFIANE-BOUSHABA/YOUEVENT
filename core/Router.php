@@ -1,7 +1,7 @@
 <?php
 
 class Router{
-    private $controller = 'App\Controller\HomeController';
+    private $controller = 'App\Controller\AuthController';
     private $method = 'index';
     private $param = [];
 
@@ -36,7 +36,7 @@ class Router{
             if (method_exists($this->controller,$method)) {
                 $this->method = $method;
             }else {
-                echo 'this page is note exist';
+                echo 'this method is note exist';
                 exit;
             }
         }

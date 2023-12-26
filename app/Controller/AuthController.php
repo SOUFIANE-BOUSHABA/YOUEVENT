@@ -2,12 +2,14 @@
 
 namespace App\Controller;
 
-class HomeController {
+class AuthController {
 
     public function index(){
-        include_once '../app/View/Home.php';
+        include_once '../app/View/login.php';
     }
-
+    public function regester(){
+        include_once '../app/View/regester.php';
+    }
     public function add($firstname ,$lastname){
         include_once '../app/View/add.php';
     }
