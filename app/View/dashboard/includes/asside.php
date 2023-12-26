@@ -2,19 +2,11 @@
                 
                 <ul class="list-unstyled">
                    
-                    <li><a href="#">dashboard</a></li>
-                    <li><a href="utilisteur.php">users</a></li>
-                    <li><a href="request.php">requests</a></li>
-                    <li><a href="hotel.php">hotels</a></li>
+                    <li> <i class="fa-solid fa-chart-simple"></i> <a href="#">Dashboard</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Reservations</a></li>
                   
-                    <li><a href="hotel.php">hotels</a></li>
-                    <li><a href="romms.php">romms</a></li>
-                    <li><a href="reservation.php">reservations</a></li>
-                    <li><a href="requestresponsable.php">request</a></li>
-                 
-                    <li><a href="hotel.php">hotel</a></li>
-                    <li><a href="romms.php">romms</a></li>
-                    <li><a href="reservation.php">reservations</a></li>
                   
                 </ul>
  </aside>
