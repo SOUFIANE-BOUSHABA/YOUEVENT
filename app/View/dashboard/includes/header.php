@@ -43,18 +43,18 @@
     <header class="bg-light p-2">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
-               <h4>YouBooking</h4>
+               <h4>YouEvent</h4>
             </div>
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                   
+                   user
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="../logique/logout.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="">Logout</a></li>
                 </ul>
             </div>
         </div>

@@ -25,7 +25,7 @@ class Router{
             if (class_exists($controller)) {
                 $this->controller = $controller;
             }else {
-                echo 'this page is note exist';
+                echo 'this page is not exist';
                 exit;
             }
         }
@@ -36,7 +36,7 @@ class Router{
             if (method_exists($this->controller,$method)) {
                 $this->method = $method;
             }else {
-                echo 'this method is note exist';
+                echo 'this method is not exist';
                 exit;
             }
         }
