@@ -8,7 +8,15 @@
         <div class="container">
             <div class="logo">
                 <a href="./index.html">
-                    <img src="./assets/img/logo.png" alt="">
+                    <div class="nav-brand mt-1 d-flex gap-1 align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+                            fill="#f44336" strok#000000336" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon points="13 19 22 12 13 5 13 19"></polygon>
+                            <polygon points="2 19 11 12 2 5 2 19"></polygon>
+                        </svg>
+                        <h4>YouEvent</h4>
+                    </div>
                 </a>
             </div>
             <div class="nav-menu">
