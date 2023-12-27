@@ -2,12 +2,12 @@
 include(__DIR__ . "/../includes/head.php");
 include_once(__DIR__ . "/../includes/header.php");
 ?>
-<!-- Contact Top Content Section Begin -->
+
 <section class="contact-content-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <div class="cc-text set-bg" data-setbg="../assets/img/contact-content-bg.jpg">
+                <div class="cc-text set-bg" data-setbg="./assets/img/contact-content-bg.jpg">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-4">
                             <div class="section-title">

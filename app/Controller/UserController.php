@@ -8,6 +8,7 @@ class UserController
     private $birth;
     private $email;
     private $password;
+    private $identifier;
 
     public function __construct()
     {
@@ -15,7 +16,7 @@ class UserController
 
     public function index()
     {
-        header("Location: user/home");
+        $this->home();
     }
     public function home()
     {

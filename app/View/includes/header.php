@@ -22,10 +22,14 @@
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul>
-                        <li class="active"><a href="home">Home</a></li>
-                        <li><a href="about">About</a></li>
-                        <li><a href="events">Events</a></li>
-                        <li><a href="contact">Contacts</a></li>
+                        <?php
+                            $arr = array('home', 'about', 'events', 'contact');
+                            foreach($arr as $v) :
+                                ?>
+                                <li class="<?= $_GET['uri'] == 'user/' . $v ? 'active' : '' ?>"><a href="<?= '?uri=user/' . $v ?>"><?= $v ?></a></li>
+                                <?php
+                            endforeach;
+                        ?>
                     </ul>
                 </nav>
                 <a href="#" class="primary-btn top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

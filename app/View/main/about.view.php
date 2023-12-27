@@ -10,7 +10,7 @@ include(__DIR__ . "/../includes/header.php");
                 <div class="breadcrumb-text">
                     <h2>About Us</h2>
                     <div class="bt-option">
-                        <a href="#">Home</a>
+                        <a href="home">Home</a>
                         <span>About</span>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ include(__DIR__ . "/../includes/header.php");
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-pic">
-                    <img src="../assets/img/about-us.jpg" alt="">
+                    <img src="./assets/img/about-us.jpg" alt="">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -87,10 +87,10 @@ include(__DIR__ . "/../includes/header.php");
                             <div class="testimonial-item">
                                 <div class="ti-author">
                                     <div class="quote-pic">
-                                        <img src="../assets/img/quote.png" alt="">
+                                        <img src="./assets/img/quote.png" alt="">
                                     </div>
                                     <div class="ta-pic">
-                                        <img src="../assets/img/testimonial/testimonial-1.jpg" alt="">
+                                        <img src="./assets/img/testimonial/testimonial-1.jpg" alt="">
                                     </div>
                                     <div class="ta-text">
                                         <h5>Emma Sandoval</h5>
@@ -106,10 +106,10 @@ include(__DIR__ . "/../includes/header.php");
                             <div class="testimonial-item">
                                 <div class="ti-author">
                                     <div class="quote-pic">
-                                        <img src="../assets/img/quote.png" alt="">
+                                        <img src="./assets/img/quote.png" alt="">
                                     </div>
                                     <div class="ta-pic">
-                                        <img src="../assets/img/testimonial/testimonial-2.jpg" alt="">
+                                        <img src="./assets/img/testimonial/testimonial-2.jpg" alt="">
                                     </div>
                                     <div class="ta-text">
                                         <h5>John Smith</h5>
@@ -125,10 +125,10 @@ include(__DIR__ . "/../includes/header.php");
                             <div class="testimonial-item">
                                 <div class="ti-author">
                                     <div class="quote-pic">
-                                        <img src="../assets/img/quote.png" alt="">
+                                        <img src="./assets/img/quote.png" alt="">
                                     </div>
                                     <div class="ta-pic">
-                                        <img src="../assets/img/testimonial/testimonial-2.jpg" alt="">
+                                        <img src="./assets/img/testimonial/testimonial-2.jpg" alt="">
                                     </div>
                                     <div class="ta-text">
                                         <h5>John Smith</h5>
