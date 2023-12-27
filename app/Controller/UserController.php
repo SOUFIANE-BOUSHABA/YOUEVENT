@@ -13,7 +13,7 @@ class UserController
     }
 
     public function index() {
-        include_once (__DIR__ . "/../View/main/index.view.php");
+        include_once (__DIR__ . "/../View/main/about.view.php");
     }
 
 }
