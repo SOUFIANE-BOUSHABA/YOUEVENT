@@ -1,8 +1,14 @@
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
 <header class="header-section">
     <div class="container">
         <div class="logo">
             <a href="./index.html">
-                <img src="img/logo.png" alt="">
+                <img src="./assets/img/logo.png" alt="">
             </a>
         </div>
         <div class="nav-menu">
