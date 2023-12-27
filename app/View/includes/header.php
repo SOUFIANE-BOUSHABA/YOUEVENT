@@ -22,10 +22,10 @@
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./user/about">About</a></li>
-                        <li><a href="./speaker.html">Events</a></li>
-                        <li><a href="./user/contact">Contacts</a></li>
+                        <li class="active"><a href="home">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="events">Events</a></li>
+                        <li><a href="contact">Contacts</a></li>
                     </ul>
                 </nav>
                 <a href="#" class="primary-btn top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

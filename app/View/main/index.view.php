@@ -4,7 +4,7 @@ include(__DIR__ . "/../includes/header.php");
 ?>
 
 <!-- Hero Section Begin -->
-<section class="hero-section set-bg" data-setbg="./assets/img/hero.jpg">
+<section class="hero-section set-bg" data-setbg="../assets/img/hero.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -15,7 +15,7 @@ include(__DIR__ . "/../includes/header.php");
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="./assets/img/hero-right.png" alt="">
+                <img src="../assets/img/hero-right.png" alt="">
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@ include(__DIR__ . "/../includes/header.php");
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="latest-item set-bg large-item" data-setbg="img/blog/latest-b/latest-1.jpg">
+                <div class="latest-item set-bg large-item" data-setbg="../assets/img/blog/latest-b/latest-1.jpg">
                     <div class="li-tag">Marketing</div>
                     <div class="li-text">
                         <h4><a href="./blog-details.html">Improve You Business Cards And Enchan Your Sales</a></h4>
@@ -72,7 +72,7 @@ include(__DIR__ . "/../includes/header.php");
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-2.jpg">
+                <div class="latest-item set-bg" data-setbg="../assets/img/blog/latest-b/latest-2.jpg">
                     <div class="li-tag">Experience</div>
                     <div class="li-text">
                         <h5><a href="./blog-details.html">All users on MySpace will know that there are millions of
@@ -80,7 +80,7 @@ include(__DIR__ . "/../includes/header.php");
                         <span><i class="fa fa-clock-o"></i> 19th May, 2019</span>
                     </div>
                 </div>
-                <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-3.jpg">
+                <div class="latest-item set-bg" data-setbg="../assets/img/blog/latest-b/latest-3.jpg">
                     <div class="li-tag">Marketing</div>
                     <div class="li-text">
                         <h5><a href="./blog-details.html">A Pocket PC is a handheld computer, which features many of the
@@ -97,7 +97,7 @@ include(__DIR__ . "/../includes/header.php");
 <!-- Newslatter Section Begin -->
 <section class="newslatter-section">
     <div class="container">
-        <div class="newslatter-inner set-bg" data-setbg="img/newslatter-bg.jpg">
+        <div class="newslatter-inner set-bg" data-setbg="../assets/img/newslatter-bg.jpg">
             <div class="ni-text">
                 <h3>Subscribe Newsletter</h3>
                 <p>Subscribe to our newsletter and don’t miss anything</p>
