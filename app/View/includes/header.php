@@ -7,7 +7,7 @@
     <header class="header-section">
         <div class="container">
             <div class="logo">
-                <a href="./index.html">
+                <a href="#">
                     <div class="nav-brand mt-1 d-flex gap-1 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                             fill="#f44336" strok#000000336" stroke-width="2" stroke-linecap="round"
@@ -23,9 +23,9 @@
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./user/about">About</a></li>
                         <li><a href="./speaker.html">Events</a></li>
-                        <li><a href="./contact.html">Contacts</a></li>
+                        <li><a href="./user/contact">Contacts</a></li>
                     </ul>
                 </nav>
                 <a href="#" class="primary-btn top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
