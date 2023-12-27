@@ -23,7 +23,7 @@
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./about-us.html">About</a></li>
+                        <li><a href="./about.html">About</a></li>
                         <li><a href="./speaker.html">Events</a></li>
                         <li><a href="./contact.html">Contacts</a></li>
                     </ul>
