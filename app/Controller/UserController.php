@@ -12,5 +12,8 @@ class UserController
     {
     }
 
+    public function index() {
+        include_once (__DIR__ . "/../View/main/index.view.php");
+    }
 
 }
