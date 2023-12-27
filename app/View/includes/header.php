@@ -24,16 +24,7 @@
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
                         <li><a href="./about-us.html">About</a></li>
-                        <li><a href="./speaker.html">Speakers</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Jayden</a></li>
-                                <li><a href="#">Sara</a></li>
-                                <li><a href="#">Emma</a></li>
-                                <li><a href="#">Harriet</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./schedule.html">Schedule</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./speaker.html">Events</a></li>
                         <li><a href="./contact.html">Contacts</a></li>
                     </ul>
                 </nav>
