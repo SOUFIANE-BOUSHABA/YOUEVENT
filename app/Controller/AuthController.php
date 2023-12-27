@@ -34,6 +34,7 @@ class AuthController {
     }
 
     public function loginUser() {
+        
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit']=='login') {
             $email = $_POST['email'];
             $password = $_POST['password'];

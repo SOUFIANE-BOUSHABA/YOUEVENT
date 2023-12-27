@@ -32,7 +32,7 @@
                     <div><input type="radio"class="form-check-input" name="userType" value="2" required> organisateur</div>
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-primary" name="submit" value="regester" type="submit">S'inscrire</button>
+                    <button class="btn btn-primary" name="submit" value="UpdateUser" type="submit">S'inscrire</button>
                 </div>
                 <div class="mt-3">
             <p>I have an account, <a href="../">login</a>.</p>
