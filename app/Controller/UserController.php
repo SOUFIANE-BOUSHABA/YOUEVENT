@@ -13,7 +13,15 @@ class UserController
     }
 
     public function index() {
+        include_once (__DIR__ . "/../View/main/index.view.php");
+    } 
+     public function contact() {
         include_once (__DIR__ . "/../View/main/contact.view.php");
+    }
+
+
+    public function about() {
+        include_once (__DIR__ . "/../View/main/about.view.php");
     }
 
 }

@@ -2,7 +2,7 @@
 <body>
     <div class="container d-flex justify-content-center w-full mt-8" style="height: 600px;">
         <div class="d-flex mt-8 w-full col-md-4 align-items-center">
-            <form class="form-control" id="registrationForm" action="" method="post" novalidate>
+            <form class="form-control shadow" id="registrationForm" action="./registration" method="post" novalidate>
                 <div class="mb-3">
                     <label for="firstname" class="form-label">Nom </label>
                     <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nom " required>
@@ -32,7 +32,7 @@
                     <div><input type="radio"class="form-check-input" name="userType" value="2" required> organisateur</div>
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-primary" type="submit">S'inscrire</button>
+                    <button class="btn btn-primary" name="submit" value="regester" type="submit">S'inscrire</button>
                 </div>
                 <div class="mt-3">
             <p>I have an account, <a href="../">login</a>.</p>
