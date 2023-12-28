@@ -7,9 +7,10 @@ use PDOException;
 
 use App\Database\Database;
 
-class AuthModel {
+class AdminModel {
     private $db;
 
+    private $user_id;
     private $firstname;
     private $lastname;
     private $email;
@@ -19,6 +20,7 @@ class AuthModel {
     public function __construct() {
         $this->db = new Database();
     }
+   
     public function setFirstname($firstname){
         $this->firstname=$firstname;
     }
@@ -49,7 +51,7 @@ class AuthModel {
     public function getetRoleId(){
         return $this->role_id;
     }
-
+ 
     public function findAll() {
         $conn = $this->db->getConnection();
         $sql = "SELECT * FROM `users`";
@@ -61,36 +63,9 @@ class AuthModel {
         }
     }
 
-    public function registerUser() {
-        $conn = $this->db->getConnection();
-        $sql = "INSERT INTO `users`( `first_name`, `last_name`, `password`, `email`, `id_role`) VALUES (?, ?, ?, ? ,?)";
-        $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$this->firstname, $this->lastname, $hashedPassword , $this->email, $this->role_id]);
-        if($stmt){
-            return true;
-        }
+    public function updateUser(){
+        
     }
-   
-
-    public function loginUser($email , $password){
-        $conn = $this->db->getConnection();
-        $sql = "SELECT * FROM `users` where email = ?";
-        $stmt = $conn->prepare($sql);
-       
-        $stmt->execute([$email]);
-        $result = $stmt->fetchObject();
-        if ($result && password_verify($password, $result->password)) {
-
-            return $result;
-           
-        } else {
-            return false; 
-        }
-    }
-
-
-    
 }
 
 
