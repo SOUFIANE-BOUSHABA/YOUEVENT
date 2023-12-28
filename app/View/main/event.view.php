@@ -1,6 +1,9 @@
 <?php
 include(__DIR__ . "/../includes/head.php");
 include(__DIR__ . "/../includes/header.php");
+require(__DIR__ . "/../../Controller/EventController.php");
+use App\Controller\EventController;
+$event = new EventController();
 ?>
 
 <section class="container-fluid p-0" style="height: 100vh;">
@@ -17,7 +20,9 @@ include(__DIR__ . "/../includes/header.php");
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-
+                        <?php
+                        $event->showEvents();
+                        ?>  
                     </div>
                 </div>
             </div>
