@@ -19,10 +19,10 @@ $event = new EventController();
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 p-0">
                     <div class="card border-0 mb-4">
-                        <div class="card-body d-flex gap-3 ms-2"
-                            style="flex-wrap: wrap;">
+                        <div class="card-body p-0 d-flex gap-2"
+                            style="flex-wrap: wrap; margin-left: 30px;">
                             <?php
                             $event->showEvents();
                             ?>
