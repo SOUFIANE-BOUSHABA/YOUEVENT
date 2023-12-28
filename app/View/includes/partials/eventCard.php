@@ -1,5 +1,5 @@
-<a href="">
-    <div class="card flex-shrink-0" style="width: 16rem; height: 300px;">
+<a href="?uri=user/eventdetails">
+    <div class="card flex-shrink-0 mb-2" style="width: 17rem; height: 315px;">
         <img src="./assets/img/thumbnail.png" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">
@@ -8,8 +8,10 @@
             <p class="card-text">
                 <?= $OBJ->event_desc ?>
             </p>
-            By:
-            <?= $OBJ->first_name . " " . $OBJ->last_name ?>
+            <span class="text-muted">
+                By:
+                <?= $OBJ->first_name . " " . $OBJ->last_name ?>
+            </span>
         </div>
     </div>
 </a>
