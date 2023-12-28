@@ -29,6 +29,10 @@ class UserController
     {
         include_once(__DIR__ . "/../View/main/event.view.php");
     }
+    public function eventdetails()
+    {
+        include_once(__DIR__ . "/../View/main/eventdetails.view.php");
+    }
     public function contact()
     {
         include_once(__DIR__ . "/../View/main/contact.view.php");
