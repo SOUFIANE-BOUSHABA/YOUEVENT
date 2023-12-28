@@ -3,6 +3,7 @@
     <div class="container d-flex justify-content-center mt-8" style="height: 600px;">
         <div class="d-flex w-full col-md-4 align-items-center">
             <form class="shadow p-3" id="formular" action="auth/loginUser" method="post" novalidate>
+
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>

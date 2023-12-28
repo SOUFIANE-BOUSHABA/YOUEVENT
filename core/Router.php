@@ -18,7 +18,6 @@ class Router{
         }
       
         $uri = explode('/',trim($uri,'/'));
-
         if (!empty($uri[0])) {
             $controller = 'App\Controller\\' . $uri[0].'Controller';
             unset($uri[0]);

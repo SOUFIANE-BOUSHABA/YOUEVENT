@@ -81,7 +81,9 @@ class AuthModel {
         $stmt->execute([$email]);
         $result = $stmt->fetchObject();
         if ($result && password_verify($password, $result->password)) {
+
             return $result;
+           
         } else {
             return false; 
         }
