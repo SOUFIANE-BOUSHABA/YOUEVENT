@@ -1,4 +1,4 @@
-<a href="#">
+<a href="?uri=user/eventdetails">
     <div class="card flex-shrink-0 mb-2" style="width: 17rem; height: 315px;">
         <img src="./assets/img/thumbnail.png" class="card-img-top" alt="...">
         <div class="card-body">
