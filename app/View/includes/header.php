@@ -1,8 +1,8 @@
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <!-- Header Section Begin -->
     <header class="header-section">
         <div class="container">
@@ -22,10 +22,14 @@
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./user/about">About</a></li>
-                        <li><a href="./speaker.html">Events</a></li>
-                        <li><a href="./user/contact">Contacts</a></li>
+                        <?php
+                            $arr = array('home', 'about', 'events', 'contact');
+                            foreach($arr as $v) :
+                                ?>
+                                <li class="<?= $_GET['uri'] == 'user/' . $v ? 'active' : '' ?>"><a href="<?= '?uri=user/' . $v ?>"><?= $v ?></a></li>
+                                <?php
+                            endforeach;
+                        ?>
                     </ul>
                 </nav>
                 <a href="#" class="primary-btn top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

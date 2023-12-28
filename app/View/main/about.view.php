@@ -10,7 +10,7 @@ include_once '../app/View/includes/header.php';
                 <div class="breadcrumb-text">
                     <h2>About Us</h2>
                     <div class="bt-option">
-                        <a href="#">Home</a>
+                        <a href="home">Home</a>
                         <span>About</span>
                     </div>
                 </div>

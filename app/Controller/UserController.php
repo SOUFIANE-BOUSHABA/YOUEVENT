@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+
 class UserController
 {
     private $firstname;
@@ -12,16 +13,25 @@ class UserController
     {
     }
 
-    public function index() {
-        include_once (__DIR__ . "/../View/main/index.view.php");
-    } 
-     public function contact() {
-        include_once (__DIR__ . "/../View/main/contact.view.php");
+    public function index()
+    {
+        $this->home();
     }
-
-
-    public function about() {
-        include_once (__DIR__ . "/../View/main/about.view.php");
+    public function home()
+    {
+        include_once(__DIR__ . "/../View/main/index.view.php");
     }
-
+    public function about()
+    {
+        include_once(__DIR__ . "/../View/main/about.view.php");
+    }
+    public function events()
+    {
+        include_once(__DIR__ . "/../View/main/event.view.php");
+    }
+    public function contact()
+    {
+        include_once(__DIR__ . "/../View/main/contact.view.php");
+    }
+    
 }

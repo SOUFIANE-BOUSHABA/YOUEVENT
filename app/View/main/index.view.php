@@ -63,7 +63,7 @@ include_once '../app/View/includes/header.php';
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="latest-item set-bg large-item" data-setbg="img/blog/latest-b/latest-1.jpg">
+                <div class="latest-item set-bg large-item" data-setbg="./assets/img/blog/latest-b/latest-1.jpg">
                     <div class="li-tag">Marketing</div>
                     <div class="li-text">
                         <h4><a href="./blog-details.html">Improve You Business Cards And Enchan Your Sales</a></h4>
@@ -72,7 +72,7 @@ include_once '../app/View/includes/header.php';
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-2.jpg">
+                <div class="latest-item set-bg" data-setbg="./assets/img/blog/latest-b/latest-2.jpg">
                     <div class="li-tag">Experience</div>
                     <div class="li-text">
                         <h5><a href="./blog-details.html">All users on MySpace will know that there are millions of
@@ -80,7 +80,7 @@ include_once '../app/View/includes/header.php';
                         <span><i class="fa fa-clock-o"></i> 19th May, 2019</span>
                     </div>
                 </div>
-                <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-3.jpg">
+                <div class="latest-item set-bg" data-setbg="./assets/img/blog/latest-b/latest-3.jpg">
                     <div class="li-tag">Marketing</div>
                     <div class="li-text">
                         <h5><a href="./blog-details.html">A Pocket PC is a handheld computer, which features many of the
@@ -97,7 +97,7 @@ include_once '../app/View/includes/header.php';
 <!-- Newslatter Section Begin -->
 <section class="newslatter-section">
     <div class="container">
-        <div class="newslatter-inner set-bg" data-setbg="img/newslatter-bg.jpg">
+        <div class="newslatter-inner set-bg" data-setbg="./assets/img/newslatter-bg.jpg">
             <div class="ni-text">
                 <h3>Subscribe Newsletter</h3>
                 <p>Subscribe to our newsletter and don’t miss anything</p>
@@ -123,7 +123,7 @@ include_once '../app/View/includes/header.php';
                 <div class="cs-text">
                     <div class="ct-address">
                         <span>Address:</span>
-                        <p>01 Pascale Springs Apt. 339, NY City <br />United State</p>
+                        <p>Algeria. 339, NY City <br />United State</p>
                     </div>
                     <ul>
                         <li>
@@ -143,9 +143,9 @@ include_once '../app/View/includes/header.php';
             </div>
             <div class="col-lg-6">
                 <div class="cs-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52901.38789495531!2d-118.19465514866786!3d34.03523211493029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf71ad83ff9f%3A0x518b28657f4543b7!2sEast%20Los%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1579763856144!5m2!1sen!2sbd"
-                        height="400" style="border:0;" allowfullscreen=""></iframe>
+                    <iframe <iframe
+                        src="https://www.google.com/maps/d/embed?mid=1IHZSqvUTfGQTIyjT5hrchKa2gWA&hl=en&ehbc=2E312F"
+                        width="640" height="480"></iframe>
                 </div>
             </div>
         </div>
