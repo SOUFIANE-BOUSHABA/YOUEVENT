@@ -17,23 +17,32 @@ class AdminController {
 
 
     public function updateUser(){
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit']=='UpdateUser') {
-            $userId=$_POST['user_id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit'] == 'UpdateUser') {
+            $userId = $_POST['user_id'];
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $role_id=$_POST['userType'];
-
+            $role_id = $_POST['userType'];
+    
             $newUser = new AdminModel();
             $newUser->setFirstname($firstname);
             $newUser->setLastname($lastname);
             $newUser->setEmail($email);
             $newUser->setPassword($password);
             $newUser->setRoleId($role_id);
-           if($newUser->updateUser()){
-            include "../app/View/login.php";
-           } 
-        } 
+            if ($newUser->updateUser($userId, $newUser->getFirstname(), $newUser->getLastname(), $newUser->getEmail(), $newUser->getPassword(), $newUser->getetRoleId())) {
+               $this->getAllUser();
+            }
+        }
     }
+
+    public function deletUser($id){
+        $userdel = new AdminModel();
+        $res = $userdel->deletUser($id);
+        if($res){
+            $this->getAllUser();
+        }
+    }
+    
 }
