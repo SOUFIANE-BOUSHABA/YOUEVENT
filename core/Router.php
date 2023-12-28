@@ -1,6 +1,7 @@
 <?php
 
-class Router{
+class Router
+{
     private $controller = 'App\Controller\AuthController';
     private $method = 'index';
     private $param = [];
@@ -10,33 +11,36 @@ class Router{
         $this->router();
     }
 
-    public function router() {
-        if(empty($_GET['uri'])){
+    public function router()
+    {
+        if (empty($_GET['uri'])) {
             $uri = '';
-        }else{
+        } else {
             $uri = $_GET['uri'];
         }
-      
-        $uri = explode('/',trim($uri,'/'));
+
+        $uri = explode('/', trim($uri, '/'));
         if (!empty($uri[0])) {
-            $controller = 'App\Controller\\' . $uri[0].'Controller';
+            $controller = 'App\Controller\\' . $uri[0] . 'Controller';
             unset($uri[0]);
             if (class_exists($controller)) {
                 $this->controller = $controller;
-            }else {
-                echo 'this page is not exist';
-                exit;
+            } else {
+                http_response_code(404);
+                include(__DIR__ . "/../app/View/main/404.view.php");
+                die();
             }
         }
 
         if (isset($uri[1])) {
             $method = $uri[1];
             unset($uri[1]);
-            if (method_exists($this->controller,$method)) {
+            if (method_exists($this->controller, $method)) {
                 $this->method = $method;
-            }else {
-                echo 'this method is not exist';
-                exit;
+            } else {
+                http_response_code(404);
+                include(__DIR__ . "/../app/View/main/404.view.php");
+                die();
             }
         }
 
@@ -47,7 +51,7 @@ class Router{
             $this->param = $param;
         }
 
-        call_user_func_array([$object,$this->method],$this->param);
-        
+        call_user_func_array([$object, $this->method], $this->param);
+
     }
 }
