@@ -8,7 +8,6 @@ class UserController
     private $birth;
     private $email;
     private $password;
-    private $identifier;
 
     public function __construct()
     {
