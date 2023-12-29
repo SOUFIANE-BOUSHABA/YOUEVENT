@@ -70,9 +70,6 @@ class AdminModel {
             $sql = "UPDATE `users`   SET `first_name` = ? , `last_name` = ? ,  `email` = ? , `password` = ? ,  `id_role` = ? WHERE `user_id` = ? ";
 
             $stmt = $conn->prepare($sql);
-
-
-           
             $result=  $stmt->execute([$firstname, $lastname, $email, $password, $role_id, $userId]);
             if($result){
                 return true;

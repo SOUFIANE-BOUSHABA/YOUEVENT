@@ -3,6 +3,8 @@
 namespace App\Controller;
 use App\Controller\AdminController; 
 use App\Model\AuthModel;
+use App\Controller\MailerController;
+
 class AuthController {
 
     public function index(){
@@ -28,8 +30,10 @@ class AuthController {
             $newUser->setPassword($password);
             $newUser->setRoleId($role_id);
            if($newUser->registerUser()){
+             MailerController::sendMail($newUser->getEmail(),'regestration','bonjour monsieur '.$newUser->getFirstname().' '.$newUser->getLastname());
             include "../app/View/login.php";
            } 
+           
         } 
     }
 
