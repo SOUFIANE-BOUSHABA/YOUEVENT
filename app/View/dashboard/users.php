@@ -32,7 +32,7 @@ include_once '../app/View/dashboard/includes/header.php';
                                 </td>
                                 <td>
                                     <a type="button" class="btn btn-warning">Ban</a>
-                                    <a href="" type="button" class="btn btn-danger">supprimer</a>
+                                    <a href="?uri=admin/deletUser/<?= $user->user_id ?>" type="button" class="btn btn-danger">supprimer</a>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $user->user_id ?>">
                                         modifier
                                     </button>
@@ -70,7 +70,7 @@ include_once '../app/View/dashboard/includes/header.php';
                                                             <div><input type="radio" class="form-check-input" name="userType" value="2" required> organisateur</div>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <button class="btn btn-primary" name="submit" value="regester" type="submit">update</button>
+                                                            <button class="btn btn-primary" name="submit" value="UpdateUser" type="submit">update</button>
                                                         </div>
                                                     </form>
                                                 </div>

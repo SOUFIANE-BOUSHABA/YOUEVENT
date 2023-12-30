@@ -63,9 +63,31 @@ class AdminModel {
         }
     }
 
-    public function updateUser(){
-        
+    public function updateUser($userId, $firstname, $lastname, $email, $password, $role_id){
+       
+            $conn = $this->db->getConnection();
+
+            $sql = "UPDATE `users`   SET `first_name` = ? , `last_name` = ? ,  `email` = ? , `password` = ? ,  `id_role` = ? WHERE `user_id` = ? ";
+
+            $stmt = $conn->prepare($sql);
+            $result=  $stmt->execute([$firstname, $lastname, $email, $password, $role_id, $userId]);
+            if($result){
+                return true;
+            }
+           
+      
     }
+
+    public function deletUser($id){
+        $conn = $this->db->getConnection();
+        $sql = "DELETE FROM `users` Where user_id = ?";
+        $stmt = $conn->prepare($sql);
+        $result= $stmt->execute([$id]);
+        if($result){
+            return true;
+        }
+    }
+
 }
 
 
