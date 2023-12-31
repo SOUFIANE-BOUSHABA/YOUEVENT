@@ -20,7 +20,7 @@
                     <button class="btn btn-primary" name="submit" value="login" type="submit">Se connecter</button>
                 </div>
                 <div class="mt-3">
-                    <p>If you don't have an account, <a href="auth/register">create one</a>.</p>
+                    <p>If you don't have an account, <a href="register">create one</a>.</p>
                 </div>
             </form>
         </div>
