@@ -26,9 +26,7 @@ class Router
             if (class_exists($controller)) {
                 $this->controller = $controller;
             } else {
-                http_response_code(404);
-                include(__DIR__ . "/../app/View/main/404.view.php");
-                die();
+                $this->setStatusCode(404);
             }
         }
 
@@ -38,9 +36,7 @@ class Router
             if (method_exists($this->controller, $method)) {
                 $this->method = $method;
             } else {
-                http_response_code(404);
-                include(__DIR__ . "/../app/View/main/404.view.php");
-                die();
+                $this->setStatusCode(404);
             }
         }
 
@@ -53,5 +49,11 @@ class Router
 
         call_user_func_array([$object, $this->method], $this->param);
 
+    }
+    public function setStatusCode($statusCode)
+    {
+        http_response_code($statusCode);
+        include(__DIR__ . "/../app/View/main/" . $statusCode . ".view.php");
+        die();
     }
 }

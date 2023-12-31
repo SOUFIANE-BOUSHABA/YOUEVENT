@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use Router;
 
 require(__DIR__ . "/../Model/EventModel.php");
 
@@ -9,9 +10,11 @@ use App\Model\EventModal;
 class EventController
 {
     private $eventModal;
+    private $router;
     public function __construct()
     {
         $this->eventModal = new EventModal();
+        $this->router = new Router();
     }
     public function showEvents()
     {
@@ -32,9 +35,7 @@ class EventController
         if ($rs) {
             return $rs;
         } else {
-            http_response_code(404);
-            include(__DIR__ . "/../View/main/404.view.php");
-            die();
+            $this->router->setStatusCode(404);
         }
     }
     public function eventNameChanger($event_name) {
