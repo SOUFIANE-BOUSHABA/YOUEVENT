@@ -1,3 +1,9 @@
+<?php
+use App\Controller\AuthController;
+
+$auth = new AuthController();
+?>
+
 <body>
     <!-- Page Preloder -->
     <!-- <div id="preloder">
@@ -23,20 +29,21 @@
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <?php
-                            $arr = array('home', 'about', 'events', 'contact');
-                            foreach($arr as $v) :
-                                ?>
-                                <li class="<?= $_GET['uri'] == 'user/' . $v ? 'active' : '' ?>"><a href="<?= '?uri=user/' . $v ?>"><?= $v ?></a></li>
-                                <?php
-                            endforeach;
+                        $arr = array('home', 'about', 'events', 'contact');
+                        foreach ($arr as $v):
+                            ?>
+                            <li class="<?= $_GET['uri'] == 'user/' . $v ? 'active' : '' ?>"><a
+                                    href="<?= '?uri=user/' . $v ?>">
+                                    <?= $v ?>
+                                </a></li>
+                            <?php
+                        endforeach;
                         ?>
                     </ul>
                 </nav>
-                <a href="?uri=user/login" class="primary-btn top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3" />
-                    </svg> Login</a>
+                <?php
+                $auth->showLoginOptions();
+                ?>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>

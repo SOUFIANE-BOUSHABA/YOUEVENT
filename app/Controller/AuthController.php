@@ -47,8 +47,8 @@ class AuthController {
                 $_SESSION['role_id']=$user->id_role;
                 $_SESSION['user_id']=$user->user_id;
                 if($_SESSION['role_id']=='3'){
-                    include_once '../app/View/main/index.view.php';
-                    exit();
+                    header("Location: ../user");
+                    exit;
                 }else{
                     include_once '../app/View/dashboard/dashboard.php';
                     exit();
@@ -57,6 +57,18 @@ class AuthController {
             include_once '../app/View/login.php';
            }
         } 
+    }
+
+    public function isLoggedIn() {
+        return !empty($_SESSION['user_id']) ? true : false;
+    }
+
+    public function showLoginOptions() {
+        if ($this->isLoggedIn()) {
+            include_once(__DIR__ . "/../View/includes/partials/loggedInOptions.php");
+        } else {
+            include_once(__DIR__ . "/../View/includes/partials/loginButton.php");
+        }
     }
 
 }
