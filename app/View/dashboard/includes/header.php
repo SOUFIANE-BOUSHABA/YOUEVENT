@@ -48,13 +48,13 @@
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                   user
+                  <?=$_SESSION['first'].' '.$_SESSION['last']; ?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="">Logout</a></li>
+                    <li><a class="dropdown-item" href="?uri=auth/logout">Logout</a></li>
                 </ul>
             </div>
         </div>

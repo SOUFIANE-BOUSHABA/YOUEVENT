@@ -35,7 +35,7 @@
                     <button class="btn btn-primary" name="submit" value="regester" type="submit">S'inscrire</button>
                 </div>
                 <div class="mt-3">
-            <p>I have an account, <a href="../">login</a>.</p>
+            <p>I have an account, <a href="login">login</a>.</p>
         </div>
             </form>
         </div>
