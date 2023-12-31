@@ -1,6 +1,6 @@
 <?php
-include(__DIR__ . "/../includes/head.php");
-include(__DIR__ . "/../includes/header.php");
+include_once(__DIR__ . "/../includes/head.php");
+include_once(__DIR__ . "/../includes/header.php");
 ?>
 
 <div style="height: 70vh;">
@@ -24,5 +24,5 @@ include(__DIR__ . "/../includes/header.php");
     </div>
 </div>
 <?php
-include(__DIR__ . "/../includes/footer.php");
+include_once(__DIR__ . "/../includes/footer.php");
 ?>
