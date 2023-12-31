@@ -4,15 +4,9 @@ namespace App\Controller;
 use App\Controller\AdminController; 
 use App\Model\AuthModel;
 use App\Controller\MailerController;
-use App\Controller\UserController;
 
 class AuthController {
 
-    private $user;
-
-    public function __construct() {
-        $this->user = new UserController();
-    }
     public function index(){
         include_once '../app/View/login.php';
     }
@@ -58,7 +52,7 @@ class AuthController {
                 $_SESSION['role_id']=$user->id_role;
                 $_SESSION['user_id']=$user->user_id;
                 if($_SESSION['role_id']=='3'){
-                    $this->user->index();
+                    include_once '../app/View/main/index.view.php';
                     exit();
                 }else{
                     include_once '../app/View/dashboard/dashboard.php';
