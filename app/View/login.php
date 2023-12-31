@@ -1,4 +1,5 @@
 <?php include_once '../app/View/includes/head.php'; ?>
+
 <body>
     <div class="container d-flex justify-content-center mt-8" style="height: 600px;">
         <div class="d-flex w-full col-md-4 align-items-center">

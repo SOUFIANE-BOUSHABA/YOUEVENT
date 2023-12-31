@@ -9,7 +9,7 @@ include_once '../app/View/dashboard/includes/header.php';
 
         <main class="col-md-10 p-3 main-content">
            <div class="shadow-sm p-3 mb-3 bg-body rounded">
-            dashboard  
+            dashboard   <?= $_SESSION['token'];?>
             </div>
             <div class="shadow-sm p-3 mb-5 bg-body rounded">
            <div class="mychart">

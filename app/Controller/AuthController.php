@@ -4,9 +4,11 @@ namespace App\Controller;
 use App\Controller\AdminController; 
 use App\Model\AuthModel;
 use App\Controller\MailerController;
+use \Firebase\JWT\JWT;
+use \Firebase\JWT\ExpiredException;
 
 class AuthController {
-
+    private $key ="boushababoushaba20010606boushaba";
     public function index(){
         include_once '../app/View/login.php';
     }
@@ -45,7 +47,10 @@ class AuthController {
          
             $user=$loginUser->loginUser($email , $password);
             if($user){
-              
+                $token = $this->generateToken($user);
+
+                $_SESSION['token'] = $token;
+               
                 $_SESSION['email']= $user->email;
                 $_SESSION['first']= $user->first_name;
                 $_SESSION['last']=$user->last_name;
@@ -63,6 +68,29 @@ class AuthController {
            }
         } 
     }
+
+
+    private function generateToken($user) {
+        $tokenId = base64_encode(random_bytes(32)); 
+        $issuedAt = time();
+        $expire = $issuedAt + 3600; 
+
+        $token = [
+            'iat' => $issuedAt,
+            'exp' => $expire,
+            'data' => [
+                'user_id' => $user->user_id,
+                'email' => $user->email,
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+                'role_id' => $user->id_role,
+            ]
+        ];
+
+        return JWT::encode($token, $this->key, 'HS256');
+    }
+
+
 
 }
 
