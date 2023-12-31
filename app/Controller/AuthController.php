@@ -10,11 +10,6 @@ class AuthController {
     public function index(){
         include_once '../app/View/login.php';
     }
-    public function register(){
-        include_once '../app/View/regester.php';
-    }
-  
-
     public function registration() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit']=='regester') {
             $firstname = $_POST['firstname'];
