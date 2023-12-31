@@ -1,6 +1,6 @@
 <?php
-include(__DIR__ . "/../includes/head.php");
-include_once(__DIR__ . "/../includes/header.php");
+include_once '../app/View/includes/head.php';
+include_once '../app/View/includes/header.php';
 ?>
 
 <section class="contact-content-section">
