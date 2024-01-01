@@ -23,7 +23,7 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                 <div class="col-lg-12 p-0">
                     <div class="d-flex flex-wrap">
                         <div class="col-lg-6">
-                            <img src="public\assets\img\thumbnail.png" class="img-thumbnail" alt="thumbnail">
+                            <img src="../../public/assets/img/thumbnail.png" class="img-thumbnail" alt="thumbnail">
                         </div>
                         <div class="col-lg-6">
                             <div class="p-0 d-flex flex-column align-items-center ms-2">

@@ -13,7 +13,8 @@
     type='text/css'>
 
   <?php
-  $path = "./assets/css/";
+  $base_url = "http://localhost/";
+  $path = "YOUEVENT/public/assets/css/";
 
   $assets = [
     "bootstrap.min.css",
@@ -26,7 +27,9 @@
   ];
 
   foreach ($assets as $v) {
-    echo "<link rel='stylesheet' href='{$path}{$v}' type='text/css'>\n";
+    ?>
+    <link rel="stylesheet" href="<?= $base_url . $path . $v ?>" type="text/css">
+    <?php
   }
   ?>
 

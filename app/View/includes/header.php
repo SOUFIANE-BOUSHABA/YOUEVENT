@@ -33,7 +33,7 @@ $auth = new AuthController();
                         foreach ($arr as $v):
                             ?>
                             <li class="<?= $_GET['uri'] == 'user/' . $v ? 'active' : '' ?>"><a
-                                    href="<?= '?uri=user/' . $v ?>">
+                                    href="<?= "/YOUEVENT/user/" . $v ?>">
                                     <?= $v ?>
                                 </a></li>
                             <?php

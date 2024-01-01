@@ -87,7 +87,8 @@
     crossorigin="anonymous"></script>
 
 <?php
-$src = './assets/js/';
+$base_url = "http://localhost/";
+$src = "http://localhost/YOUEVENT/public/assets/js/";
 
 $assets = [
     "jquery-3.3.1.min.js",
