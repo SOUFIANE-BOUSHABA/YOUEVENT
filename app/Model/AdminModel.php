@@ -88,6 +88,26 @@ class AdminModel {
         }
     }
 
+
+
+    public function getEventCount(){
+        $conn = $this->db->getConnection();
+        $sql = "SELECT COUNT(*) as event_count FROM events";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['event_count'];
+    }
+
+    public function getReservationCount(){
+        $conn = $this->db->getConnection();
+        $sql = "SELECT COUNT(*) as reservation_count FROM reservation";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['reservation_count'];
+    }
+
 }
 
 
