@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-class logoutController {
+class LogoutController {
     static function logoutUser() {
         if (isset($_POST['logout'])) {
             session_destroy();

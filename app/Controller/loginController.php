@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 use App\Controller\AuthController;
-class loginController {
+class LoginController {
 
     private $Auth;
     public function __construct() {

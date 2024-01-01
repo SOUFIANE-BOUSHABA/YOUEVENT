@@ -1,7 +1,7 @@
 <?php
-use App\Controller\logoutController;
+use App\Controller\LogoutController;
 
-logoutController::logoutUser();
+LogoutController::logoutUser();
 ?>
 <button class="btn bg-transparent border-0 mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><svg
         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000"
