@@ -65,9 +65,9 @@ class AuthController {
 
     public function showLoginOptions() {
         if ($this->isLoggedIn()) {
-            include_once(__DIR__ . "/../View/includes/partials/loggedInOptions.php");
+            include_once(__DIR__ . "/../View/includes/partials/loggedInOps.php");
         } else {
-            include_once(__DIR__ . "/../View/includes/partials/loginButton.php");
+            include_once(__DIR__ . "/../View/includes/partials/loginBtn.php");
         }
     }
 

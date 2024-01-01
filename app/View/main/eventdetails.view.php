@@ -1,10 +1,11 @@
 <?php
 include(__DIR__ . "/../includes/head.php");
 include(__DIR__ . "/../includes/header.php");
-require(__DIR__ . "/../../Controller/EventController.php");
 use App\Controller\EventController;
+use App\Controller\TicketController;
 
 $event = new EventController();
+$ticket = new TicketController();
 $OBJ = $event->eventChecker();
 $eventName = $event->eventNameChanger($OBJ->event_name);
 ?>
@@ -38,11 +39,9 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                                     </p>
                                 </div>
                                 <div class="row mt-3">
-                                    <form action="">
-                                        <button class="btn btn-primary">
-                                            Get Ticket!
-                                        </button>
-                                    </form>
+                                    <?php
+                                        $ticket->showTicketBtn();
+                                    ?>
                                 </div>
                             </div>
                         </div>
