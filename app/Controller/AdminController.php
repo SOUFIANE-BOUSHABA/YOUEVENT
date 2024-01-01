@@ -44,5 +44,14 @@ class AdminController {
             $this->getAllUser();
         }
     }
+
+
+    public function showStatistics(){
+        $adminModel = new AdminModel();
+        $eventCount = $adminModel->getEventCount();
+        $reservationCount = $adminModel->getReservationCount();
+
+        include_once '../app/View/dashboard/dashboard.php';
+    }
     
 }
