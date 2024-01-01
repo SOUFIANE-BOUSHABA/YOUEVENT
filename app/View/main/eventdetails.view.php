@@ -38,7 +38,7 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                                         <?= $OBJ->event_desc ?>
                                     </p>
                                 </div>
-                                <div class="row form-group">
+                                <div class="row d-flex align-items-center">
                                     <?php
                                         $ticket->showTicketBtn($OBJ->event_id);
                                     ?>
