@@ -4,32 +4,32 @@
         <div class="partner-logo owl-carousel">
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-1.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-1.png" alt="">
                 </div>
             </a>
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-2.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-2.png" alt="">
                 </div>
             </a>
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-3.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-3.png" alt="">
                 </div>
             </a>
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-4.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-4.png" alt="">
                 </div>
             </a>
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-5.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-5.png" alt="">
                 </div>
             </a>
             <a href="#" class="pl-table">
                 <div class="pl-tablecell">
-                    <img src="./assets/img/partner-logo/logo-6.png" alt="">
+                    <img src="../../assets/img/partner-logo/logo-6.png" alt="">
                 </div>
             </a>
         </div>
@@ -37,7 +37,8 @@
             <div class="col-lg-12">
                 <div class="footer-text">
                     <div class="ft-logo">
-                        <div class="nav-brand mt-1 d-flex gap-1 justify-content-center align-items-center user-select-none">
+                        <div
+                            class="nav-brand mt-1 d-flex gap-1 justify-content-center align-items-center user-select-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                                 fill="#f44336" strok#FFFFFF336" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -78,13 +79,29 @@
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->
-<script src="./assets/js/jquery-3.3.1.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/jquery.magnific-popup.min.js"></script>
-<script src="./assets/js/jquery.countdown.min.js"></script>
-<script src="./assets/js/jquery.slicknav.js"></script>
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+<?php
+$base_url = "http://localhost/";
+$src = "http://localhost/YOUEVENT/public/assets/js/";
+
+$assets = [
+    "jquery-3.3.1.min.js",
+    "bootstrap.min.js",
+    "jquery.magnific-popup.min.js",
+    "jquery.slicknav.js",
+    "owl.carousel.min.js",
+    "main.js",
+  ];
+foreach ($assets as $v) :
+echo "<script src='{$src}{$v}'></script>";
+endforeach;
+?>
 </body>
 
 </html>

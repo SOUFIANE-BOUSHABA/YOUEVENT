@@ -28,9 +28,12 @@ class EventController
             echo 'No upcoming events at the moment!';
         }
     }
-    public function eventChecker()
+    public function getEventUri() {
+        return explode("/", parse_url($_SERVER['QUERY_STRING'], PHP_URL_PATH));
+    }
+    public function currentEvent()
     {
-        $uriSegments = explode("/", parse_url($_SERVER['QUERY_STRING'], PHP_URL_PATH));
+        $uriSegments = $this->getEventUri();
         $rs = $this->eventModal->getEventByName($uriSegments[2]);
         if ($rs) {
             return $rs;

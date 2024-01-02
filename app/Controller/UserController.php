@@ -15,7 +15,8 @@ class UserController
 
     public function index()
     {
-        $this->home();
+        header("Location: user/home");
+        exit;
     }
     public function home()
     {

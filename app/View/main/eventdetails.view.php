@@ -1,11 +1,12 @@
 <?php
 include(__DIR__ . "/../includes/head.php");
 include(__DIR__ . "/../includes/header.php");
-require(__DIR__ . "/../../Controller/EventController.php");
 use App\Controller\EventController;
+use App\Controller\TicketController;
 
 $event = new EventController();
-$OBJ = $event->eventChecker();
+$ticket = new TicketController();
+$OBJ = $event->currentEvent();
 $eventName = $event->eventNameChanger($OBJ->event_name);
 ?>
 <section class="container-fluid p-0">
@@ -23,7 +24,7 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                 <div class="col-lg-12 p-0">
                     <div class="d-flex flex-wrap">
                         <div class="col-lg-6">
-                            <img src="public\assets\img\thumbnail.png" class="img-thumbnail" alt="thumbnail">
+                            <img src="../../public/assets/img/thumbnail.png" class="img-thumbnail" alt="thumbnail">
                         </div>
                         <div class="col-lg-6">
                             <div class="p-0 d-flex flex-column align-items-center ms-2">
@@ -37,12 +38,10 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                                         <?= $OBJ->event_desc ?>
                                     </p>
                                 </div>
-                                <div class="row mt-3">
-                                    <form action="">
-                                        <button class="btn btn-primary">
-                                            Get Ticket!
-                                        </button>
-                                    </form>
+                                <div class="row d-flex align-items-center">
+                                    <?php
+                                        $ticket->showTicketBtn($OBJ->event_id);
+                                    ?>
                                 </div>
                             </div>
                         </div>

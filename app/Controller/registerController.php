@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 use App\Controller\AuthController;
-class registerController {
+class RegisterController {
 
     private $Auth;
     public function __construct() {
