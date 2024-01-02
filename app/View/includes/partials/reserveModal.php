@@ -27,10 +27,15 @@ $ticket = new TicketController();
                             <label>Reservation Description</label>
                         </div>
                     </div>
+                    <div class="mb-3 container d-flex justify-content-center">
+                        <select class="form-select w-75" style="width: 150px;" name="user_ticket" required>
+                            <option selected hidden disabled>Ticket Type</option>
+                            <?php
+                            $ticket->getTickets($obj->event_id);
+                            ?>
+                        </select>
+                    </div>
                     <div class="row d-flex justify-content-center mb-3">
-                        <?php
-                        $ticket->ticketCheck($obj->event_id);
-                        ?>
                     </div>
                     <div class="modal-footer justify-content-center">
                         <button class="btn btn-primary border-0" type="submit" name="reserve">Make Reservation</button>

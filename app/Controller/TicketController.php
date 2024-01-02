@@ -24,14 +24,6 @@ class TicketController
             echo "Login to access this feature!";
         }
     }
-    public function ticketCheck($event_id) {
-        $rs = $this->ticketModel->getTickets($event_id);
-        if ($rs) {
-            include (__DIR__ . "/../View/includes/partials/ticketSelect.php");
-        } else {
-            echo "No Tickets can be found!";
-        }
-    }
     public function getTickets($event_id)
     {
         $rs = $this->ticketModel->getTickets($event_id);
