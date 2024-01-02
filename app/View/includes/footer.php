@@ -88,7 +88,7 @@
 
 <?php
 $base_url = "http://localhost/";
-$src = "http://localhost/YOUEVENT/public/assets/js/";
+$src = "YOUEVENT/public/assets/js/";
 
 $assets = [
     "jquery-3.3.1.min.js",
@@ -97,9 +97,10 @@ $assets = [
     "jquery.slicknav.js",
     "owl.carousel.min.js",
     "main.js",
+    "ticketSelect",
   ];
 foreach ($assets as $v) :
-echo "<script src='{$src}{$v}'></script>";
+echo "<script src='{$base_url}{$src}{$v}'></script>";
 endforeach;
 ?>
 </body>

@@ -33,14 +33,15 @@ class ReservationModel
         $rs = $stmt->fetch(PDO::FETCH_OBJ);
         return !empty($rs) ? $rs : false;
     }
-    public function linkTicket($ticket_id, $user_id)
+    public function linkTicket($ticket_id, $ticket_quant, $user_id)
     {
         $this->reservation = $this->getReservationByUserId($user_id);
         $this->reserve_id = $this->reservation->reserv_id;
-        $this->sql = "INSERT INTO `reserve`(`id_reserv`, `id_ticket`) VALUES (:reserve_id, :ticket_id);";
+        $this->sql = "INSERT INTO `reserve`(`id_reserv`, `id_ticket`, `ticket_quantity`) VALUES (:reserve_id, :ticket_id, :ticket_quant)";
         $stmt = $this->db->getConnection()->prepare($this->sql);
         $stmt->bindParam(":reserve_id", $this->reserve_id, PDO::PARAM_INT);
         $stmt->bindParam(":ticket_id", $ticket_id, PDO::PARAM_INT);
+        $stmt->bindParam(":ticket_quant", $ticket_quant, PDO::PARAM_INT);
         return $stmt->execute() ? true : false;
     }
     public function cancelReservation($user_id, $reserve_id)
