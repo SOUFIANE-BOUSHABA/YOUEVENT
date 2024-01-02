@@ -1,3 +1,8 @@
+<?php
+use App\Controller\TicketController;
+
+$ticket = new TicketController();
+?>
 <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -24,7 +29,7 @@
                     </div>
                     <div class="row d-flex justify-content-center mb-3">
                         <?php
-                        $ticket->ticketCheck($event_id);
+                        $ticket->ticketCheck($obj->event_id);
                         ?>
                     </div>
                     <div class="modal-footer justify-content-center">

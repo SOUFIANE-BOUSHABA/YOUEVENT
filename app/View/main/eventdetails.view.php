@@ -6,7 +6,7 @@ use App\Controller\TicketController;
 
 $event = new EventController();
 $ticket = new TicketController();
-$OBJ = $event->eventChecker();
+$OBJ = $event->currentEvent();
 $eventName = $event->eventNameChanger($OBJ->event_name);
 ?>
 <section class="container-fluid p-0">

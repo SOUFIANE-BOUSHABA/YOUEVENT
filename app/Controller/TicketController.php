@@ -19,7 +19,7 @@ class TicketController
     public function showTicketBtn($event_id)
     {
         if ($this->auth->isLoggedIn()) {
-            include_once(__DIR__ . "/../View/includes/partials/getTicketBtn.php");
+            include (__DIR__ . "/../View/includes/partials/showReservationBtn.php");
         } else {
             echo "Login to access this feature!";
         }
@@ -27,7 +27,7 @@ class TicketController
     public function ticketCheck($event_id) {
         $rs = $this->ticketModel->getTickets($event_id);
         if ($rs) {
-            include_once (__DIR__ . "/../View/includes/partials/ticketSelect.php");
+            include (__DIR__ . "/../View/includes/partials/ticketSelect.php");
         } else {
             echo "No Tickets can be found!";
         }
@@ -36,7 +36,7 @@ class TicketController
     {
         $rs = $this->ticketModel->getTickets($event_id);
         foreach ($rs as $OBJ):
-            include(__DIR__ . "/../View/includes/partials/ticketOption.php");
+            include (__DIR__ . "/../View/includes/partials/ticketOption.php");
         endforeach;
     }
 
