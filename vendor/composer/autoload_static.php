@@ -14,6 +14,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'F' => 
         array (
             'Fpdf\\' => 5,
+            'Firebase\\JWT\\' => 13,
         ),
         'A' => 
         array (
@@ -29,6 +30,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'Fpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/fpdf/fpdf/src/Fpdf',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'App\\' => 
         array (

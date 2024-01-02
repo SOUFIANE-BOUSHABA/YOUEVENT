@@ -50,16 +50,6 @@ class AuthModel {
         return $this->role_id;
     }
 
-    public function findAll() {
-        $conn = $this->db->getConnection();
-        $sql = "SELECT * FROM `users`";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_OBJ);
-        if($result){
-            return $result;
-        }
-    }
 
     public function registerUser() {
         $conn = $this->db->getConnection();
@@ -72,7 +62,7 @@ class AuthModel {
         }
     }
    
-
+ 
     public function loginUser($email , $password){
         $conn = $this->db->getConnection();
         $sql = "SELECT * FROM `users` where email = ?";
