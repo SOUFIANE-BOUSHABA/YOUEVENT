@@ -38,16 +38,33 @@ $ticket = new TicketController();
                     </div>
                     <div class="mb-3 container">
                         <span class="d-flex justify-content-center">
-                            <span class="pe-1">Price: </span><p id="ticket_price"></p>
+                            <span id="ticket_price"></span>
                         </span>
                     </div>
-                    <div class="mb-3 container d-grid justify-content-center">
-                        <p class="mb-1 text-center">Quantity</p>
+                    <div class="mb-3 container d-grid justify-content-center align-items-center">
+                        <p class="text-center">Quantity</p>
                         <?php
                         $ticket->getTickets($obj->event_id);
                         ?>
-                        <input type="number" class="form-control" name="ticket_quant" value="1" min="1" max="200"
-                            onKeyDown="return false" required />
+                        <div class="d-flex gap-1 user-select-none">
+                            <a class="btn" id="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                            <input type="number" class="form-control" onkeydown="return false" id="ticket_quant" name="ticket_quant" min="1"
+                                max="1000" readonly required />
+                            <a class="btn" id="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                     <div class="mb-3 container d-flex justify-content-center">
                     </div>
