@@ -46,6 +46,12 @@
                <h4>YouEvent</h4>
             </div>
 
+<?php
+if($_SESSION['role_id']==2){
+    ?>
+    <?php
+}
+?>
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   <?=$_SESSION['first'].' '.$_SESSION['last']; ?>
@@ -57,5 +63,6 @@
                     <li><a class="dropdown-item" href="?uri=auth/logout">Logout</a></li>
                 </ul>
             </div>
+
         </div>
     </header>

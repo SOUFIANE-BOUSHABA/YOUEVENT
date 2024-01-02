@@ -20,5 +20,5 @@
   <link rel="stylesheet" href="./assets/css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-
+    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>

@@ -54,6 +54,9 @@ class AuthController {
                 if($_SESSION['role_id']=='3'){
                     include_once '../app/View/main/index.view.php';
                     exit();
+                }else if($_SESSION['role_id']=='2'){
+                    include_once '../app/View/dashboard/dashboard_Organisateur.php';
+                    exit();
                 }else{
                     include_once '../app/View/dashboard/dashboard.php';
                     exit();
