@@ -90,4 +90,13 @@ class OrganisateurModel
         $rs=$stmt->execute([$id]);
         return $rs ? true : false;
     }
+    public function getAllReservation()
+    {
+        $id=$_SESSION['user_id'];
+        $this->sql = "SELECT res.reserv_name , res.reserv_desc,events.event_name ,users.first_name FROM `reservation` res join reserve re on re.id_reserv=res.reserv_id join ticket  on re.id_ticket=ticket.ticket_id join events on ticket.id_event=events.event_id join users on res.id_user=users.user_id WHERE events.id_organisateur = ?;";
+        $stmt = $this->db->getConnection()->prepare($this->sql);
+        $stmt->execute([$id]);
+        $rs = $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $rs ;
+    }
 }

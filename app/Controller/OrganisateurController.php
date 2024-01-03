@@ -43,12 +43,21 @@ class OrganisateurController {
             }
         }
     }
+public function index(){
+    include '../app/View/dashboard/dashboard_Organisateur.php';
 
+}
     public function deletEvent($id){
         $rs=$this->OrganisateurModel->deletEvent($id);
 if ($rs){
-    $this->showEvents();
+    include '../app/View/dashboard/dashboard_Organisateur.php';
 }
+    }
+    public function getAllReservation()
+    {
+        $reservation=$this->OrganisateurModel->getAllReservation();
+//        var_dump($_SESSION['user_id']); die();
+        include '../app/View/dashboard/includes/reservation.php';
     }
 
 }

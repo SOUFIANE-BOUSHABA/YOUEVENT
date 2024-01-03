@@ -17,7 +17,7 @@
                     break;
                         case 2:?>
                     <li><a href="#">Events</a></li>
-                    <li><a href="#">Reservations</a></li>
+                    <li><a href="?uri=organisateur/getAllReservation">Reservations</a></li>
                     <?php
                     break;
                     }
