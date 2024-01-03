@@ -68,13 +68,26 @@ class OrganisateurModel
         $this->sql = "INSERT INTO events (event_name, event_desc, id_organisateur) VALUES (?, ?, ?)";
         $stmt = $this->db->getConnection()->prepare($this->sql);
         $rs=$stmt->execute([$name,$desc,$id]);
+        $_SESSION['lastid'] = $this->db->getConnection()->lastInsertId();
         return $rs ? true : false;
     }
-    public function AddTickets($name,$price,$quantity)
-    {$event_id = $this->db->getConnection()->lastInsertId();;
-        $this->sql = "INSERT INTO `ticket`(`ticket_name`, `ticket_price`, `ticket_quantity`, `id_event`) VALUES ('?','?','?','?')";
+    public function AddTickets(array $tickets)
+    {   $id=$_SESSION['lastid'];
+        foreach ($tickets as $ticket)
+        {
+            $name = $ticket['ticketType'];
+            $quantity = $ticket['quantity'];
+            $price = $ticket['unitPrice'];
+            $this->sql = "INSERT INTO `ticket`( `ticket_name`, `ticket_price`, `ticket_quantity`, `id_event`) VALUES (?,?,?,?)";
+            $stmt = $this->db->getConnection()->prepare($this->sql);
+            $rs=$stmt->execute([$name,$price,$quantity,$id]);
+        }
+        return $rs ? true : false;
+    }
+    public function deletEvent($id){
+        $this->sql = "DELETE FROM `events` WHERE event_id=?";
         $stmt = $this->db->getConnection()->prepare($this->sql);
-        $rs=$stmt->execute([$name,$price,$quantity,$event_id]);
+        $rs=$stmt->execute([$id]);
         return $rs ? true : false;
     }
 }

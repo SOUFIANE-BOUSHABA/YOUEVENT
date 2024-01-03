@@ -7,7 +7,7 @@ include_once '../app/View/includes/header.php';
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <div class="cc-text set-bg" data-setbg="./assets/img/contact-content-bg.jpg">
+                <div class="cc-text set-bg" data-setbg="../assets/img/contact-content-bg.jpg">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-4">
                             <div class="section-title">

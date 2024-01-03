@@ -15,7 +15,8 @@ class UserController
 
     public function index()
     {
-        $this->home();
+        header("Location: user/home");
+        exit;
     }
     public function home()
     {
@@ -29,7 +30,7 @@ class UserController
     {
         include_once(__DIR__ . "/../View/main/event.view.php");
     }
-    public function eventdetails()
+    public function event()
     {
         include_once(__DIR__ . "/../View/main/eventdetails.view.php");
     }

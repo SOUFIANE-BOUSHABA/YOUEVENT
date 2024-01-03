@@ -21,7 +21,7 @@ include_once '../app/View/dashboard/includes/header.php';
 </div>
 
 <!-- Button to send data to the server -->
-<button type="button" onclick="sendToServer()">Send to Server</button>
+<a type="button" class="btn-primary" onclick="sendToServer()" href="http://localhost/briefs/sprint4/brief3/YOUEVENT/auth/index">Send to Server</a>
 
 <script>
     // Array to store entered data
@@ -78,7 +78,7 @@ include_once '../app/View/dashboard/includes/header.php';
     // JavaScript function to send data to the server
     function sendToServer() {
         // Perform an AJAX request using the fetch API
-        fetch('OrganisateurController.php', {
+        fetch('organisateur/ajouterTicket', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

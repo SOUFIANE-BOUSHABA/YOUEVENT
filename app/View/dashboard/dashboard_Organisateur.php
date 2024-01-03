@@ -1,9 +1,9 @@
 <?php
 include_once '../app/View/dashboard/includes/header.php';
-require(__DIR__ . "/../../Controller/OrganisateurContoller.php");
-use App\Controller\OrganisateurContoller;
+require(__DIR__ . "/../../Controller/OrganisateurController.php");
+use App\Controller\OrganisateurController;
 
-$event = new OrganisateurContoller();
+$event = new OrganisateurController();
 ?>
 <div class="container-fluid">
     <div class="row">
@@ -39,20 +39,47 @@ $event = new OrganisateurContoller();
             </div>
             <div class="modal-body">
                 <!-- Form inside the modal -->
-                <form method="post" action="auth/ajouterEvent">
+                <form method="post" action="?uri=organisateur/ajouterEvent">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Event name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="event_name">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">description</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
                     </div>
-                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary" name="ajouterEvent">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Form Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form inside the modal -->
+                <form method="post" action="?uri=organisateur/ajouterEvent">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Event name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="ajouterEvent">Save changes</button>
+                </form>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
 <?php include_once '../app/View/includes/head.php'; ?>
+
 <body>
     <div class="container d-flex justify-content-center mt-8" style="height: 600px;">
         <div class="d-flex w-full col-md-4 align-items-center">
@@ -20,7 +21,7 @@
                     <button class="btn btn-primary" name="submit" value="login" type="submit">Se connecter</button>
                 </div>
                 <div class="mt-3">
-                    <p>If you don't have an account, <a href="auth/register">create one</a>.</p>
+                    <p>If you don't have an account, <a href="register">create one</a>.</p>
                 </div>
             </form>
         </div>

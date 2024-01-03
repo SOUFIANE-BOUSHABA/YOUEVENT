@@ -1,9 +1,9 @@
-<a href="?uri=user/eventdetails">
+<a href="event/<?= $OBJ->event_name ?>">
     <div class="card flex-shrink-0 mb-2" style="width: 17rem; height: 315px;">
-        <img src="./assets/img/thumbnail.png" class="card-img-top" alt="...">
+        <img src="../assets/img/thumbnail.png" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">
-                <?= $OBJ->event_name ?>
+                <?= $eventName ?>
             </h5>
             <p class="card-text">
                 <?= $OBJ->event_desc ?>
