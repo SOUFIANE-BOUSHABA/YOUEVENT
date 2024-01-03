@@ -24,12 +24,18 @@ class TicketController
             echo "Login to access this feature!";
         }
     }
-    public function getTickets($event_id)
+    public function getTickets($event_id) {
+        return $this->ticketModel->getTickets($event_id);
+    }
+    public function showTickets($event_id)
     {
-        $rs = $this->ticketModel->getTickets($event_id);
+        $rs = $this->getTickets($event_id);
         foreach ($rs as $OBJ):
             include (__DIR__ . "/../View/includes/partials/ticketOption.php");
         endforeach;
+    }
+    public function dynamicTicketPrice() {
+        
     }
 
 }

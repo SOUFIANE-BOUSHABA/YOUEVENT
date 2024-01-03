@@ -45,6 +45,7 @@ $eventName = $event->eventNameChanger($OBJ->event_name);
                                 </div>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </div>

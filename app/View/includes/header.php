@@ -13,7 +13,7 @@ $auth = new AuthController();
     <header class="header-section">
         <div class="container">
             <div class="logo">
-                <a href="#">
+                <a href="/YOUEVENT/user/home">
                     <div class="nav-brand mt-1 d-flex gap-1 align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                             fill="#f44336" strok#000000336" stroke-width="2" stroke-linecap="round"
@@ -39,11 +39,13 @@ $auth = new AuthController();
                             <?php
                         endforeach;
                         ?>
+                        <li>
+                            <?php
+                            $auth->showLoginOptions();
+                            ?>
+                        </li>
                     </ul>
                 </nav>
-                <?php
-                $auth->showLoginOptions();
-                ?>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>

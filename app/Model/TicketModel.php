@@ -23,4 +23,8 @@ class TicketModel
         $rs = $stmt->fetchAll(PDO::FETCH_OBJ);
         return !empty($rs) ? $rs : false;
     }
+
+    public function removeTicket() {
+        $this->sql;
+    }
 }

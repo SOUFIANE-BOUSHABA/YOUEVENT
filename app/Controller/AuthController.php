@@ -10,8 +10,26 @@ use \Firebase\JWT\ExpiredException;
 class AuthController {
     private $key ="boushababoushaba20010606boushaba";
     public function index(){
-        include_once '../app/View/login.php';
+        if (!empty($_SESSION['role_id'])){
+        if($_SESSION['role_id']=='3'){
+            header("Location: ../user");
+            exit;
+        }else if($_SESSION['role_id']=='2'){
+            include_once '../app/View/dashboard/dashboard_Organisateur.php';
+            exit();
+        }else{
+            include_once '../app/View/dashboard/dashboard.php';
+            exit();
+        }
+    } else {
+include_once '../app/View/login.php';
+}
     }
+    public function logout(){
+        session_destroy();
+$this->index();
+    }
+
     public function registration() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['submit']=='regester') {
             $firstname = $_POST['firstname'];
@@ -54,6 +72,9 @@ class AuthController {
                 if($_SESSION['role_id']=='3'){
                     header("Location: ../user");
                     exit;
+                }else if($_SESSION['role_id']=='2'){
+                    include_once '../app/View/dashboard/dashboard_Organisateur.php';
+                    exit();
                 }else{
                     include_once '../app/View/dashboard/dashboard.php';
                     exit();
