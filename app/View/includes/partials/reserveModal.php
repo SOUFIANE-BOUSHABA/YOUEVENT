@@ -28,14 +28,45 @@ $ticket = new TicketController();
                         </div>
                     </div>
                     <div class="mb-3 container d-flex justify-content-center">
-                        <select class="form-select w-75" style="width: 150px;" name="user_ticket" required>
+                        <select class="form-select" style="width: 150px;" name="user_ticket" id="ticket_select"
+                            required>
                             <option selected hidden disabled>Ticket Type</option>
                             <?php
-                            $ticket->getTickets($obj->event_id);
+                            $ticket->showTickets($obj->event_id);
                             ?>
                         </select>
                     </div>
-                    <div class="row d-flex justify-content-center mb-3">
+                    <div class="mb-3 container">
+                        <span class="d-flex justify-content-center">
+                            <span id="ticket_price"></span>
+                        </span>
+                    </div>
+                    <div class="mb-3 container d-grid justify-content-center align-items-center">
+                        <p class="text-center">Quantity</p>
+                        <?php
+                        $ticket->getTickets($obj->event_id);
+                        ?>
+                        <div class="d-flex gap-1 user-select-none">
+                            <a class="btn" id="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                            <input type="number" class="form-control" onkeydown="return false" id="ticket_quant" name="ticket_quant" min="1"
+                                max="1000" readonly required />
+                            <a class="btn" id="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mb-3 container d-flex justify-content-center">
                     </div>
                     <div class="modal-footer justify-content-center">
                         <button class="btn btn-primary border-0" type="submit" name="reserve">Make Reservation</button>
@@ -45,3 +76,9 @@ $ticket = new TicketController();
         </div>
     </div>
 </div>
+
+<?php
+$base_url = "http://localhost/";
+$path = "YOUEVENT/public/assets/js/";
+?>
+<script src="<?= $base_url . $path . "ticketSelect.js" ?>"></script>
