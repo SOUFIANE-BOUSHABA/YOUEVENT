@@ -27,19 +27,19 @@
             </div>
             <div class="modal-body">
                 <!-- Form inside the modal -->
-                <form method="post" action="?uri=organisateur/updateEvent<?=$OBJ->event_id?>">
+                <form method="post" action="?uri=organisateur/updateEvent/<?=$OBJ->event_id?>">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Event name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name" value="<?=$OBJ->event_name?>">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3" ><?=$OBJ->event_desc?></textarea>
                     </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="ajouterEvent">Save changes</button>
+                <button type="submit" class="btn btn-primary" name="updateEvent">Save changes</button>
                 </form>
             </div>
         </div>
