@@ -18,11 +18,9 @@ LogoutController::logoutUser();
             <hr class="dropdown-divider" />
         </li>
         <li>
-            <a href="/YOUEVENT/user/home">
-                <form method="post">
-                    <button class="dropdown-item" type="submit" name="logout">Logout</button>
-                </form>
-            </a>
+            <form method="post">
+                <button class="dropdown-item" type="submit" name="logout">Logout</button>
+            </form>
         </li>
     </ul>
 </div>

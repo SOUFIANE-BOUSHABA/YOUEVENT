@@ -34,7 +34,7 @@ class TicketController
             include (__DIR__ . "/../View/includes/partials/ticketOption.php");
         endforeach;
     }
-    public function dynamicTicketPrice() {
+    public function showQuantity() {
         
     }
 

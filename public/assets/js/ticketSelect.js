@@ -3,6 +3,8 @@ class ticketSelect {
 
     constructor() {
         this.ticketPrice = document.getElementById('ticket_price');
+        this.qntDisplay = document.getElementById('quantity_display');
+        this.ticketGuide = document.getElementById("ticket_select_first");
         this.ChangeTicketPrice();
         this.selectTicketValue();
     }
@@ -13,6 +15,8 @@ class ticketSelect {
     }
     getTicketValueAndQuantity() {
         this.selectOps.addEventListener('change', () => {
+            this.ticketGuide.style.display = 'none';
+            this.qntDisplay.style.display = 'grid';
             const selectedOption = this.selectOps.options[this.selectOps.selectedIndex];
             this.qntPrice = parseFloat(selectedOption.getAttribute('data-price')) || 0;
             this.qnt = parseFloat(selectedOption.getAttribute('data-quantity')) || 0;
@@ -22,10 +26,11 @@ class ticketSelect {
         });
     }
     displayTicketPrices() {
-        if (this.qnt !== null) {
-            this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$';
+        if (this.qnt !== 0 && this.qnt !== null) {
+            this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$ - ' + this.qnt + ' IN STOCK';
         } else {
             this.ticketPrice.innerText = 'OUT OF STOCK';
+            this.qntDisplay.style.display = 'none';
         }
     }
     ChangeTicketPrice() {

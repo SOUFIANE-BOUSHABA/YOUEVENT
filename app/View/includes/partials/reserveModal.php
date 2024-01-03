@@ -12,7 +12,7 @@ $ticket = new TicketController();
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" class="d-flex flex-column">
+                <form action="/YOUEVENT/" method="post" class="d-flex flex-column">
                     <div class="mb-3 container">
                         <div class="form-floating mb-3">
                             <input class="form-control" name="reserv_name" type="text" placeholder="Reservation name"
@@ -38,24 +38,26 @@ $ticket = new TicketController();
                     </div>
                     <div class="mb-3 container">
                         <span class="d-flex justify-content-center">
+                            <span id="ticket_select_first">Select a ticket</span>
                             <span id="ticket_price"></span>
                         </span>
                     </div>
-                    <div class="mb-3 container d-grid justify-content-center align-items-center">
+                    <div class="mb-3 container justify-content-center align-items-center" id="quantity_display"
+                        style="display: none;">
                         <p class="text-center">Quantity</p>
                         <?php
                         $ticket->getTickets($obj->event_id);
                         ?>
-                        <div class="d-flex gap-1 user-select-none">
-                            <a class="btn" id="minus">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
+                        <div class="d-flex gap-1 user-select-none"">
+                            <a class=" btn" id="minus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
                             </a>
-                            <input type="number" class="form-control" onkeydown="return false" id="ticket_quant" name="ticket_quant" min="1"
-                                max="1000" readonly required />
+                            <input type="number" class="form-control" onkeydown="return false" id="ticket_quant"
+                                name="ticket_quant" min="1" max="1000" readonly required />
                             <a class="btn" id="plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
