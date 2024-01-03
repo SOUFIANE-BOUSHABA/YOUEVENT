@@ -70,7 +70,7 @@ $this->index();
                 $_SESSION['role_id']=$user->id_role;
                 $_SESSION['user_id']=$user->user_id;
                 if($_SESSION['role_id']=='3'){
-                    header("Location: ../user");
+                    header("Location: /YOUEVENT/user/home");
                     exit;
                 }else if($_SESSION['role_id']=='2'){
                     include_once '../app/View/dashboard/dashboard_Organisateur.php';

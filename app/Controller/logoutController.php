@@ -5,6 +5,7 @@ class LogoutController {
         if (isset($_POST['logout'])) {
             session_destroy();
        
+            header('Location: /YOUEVENT/user/home');
         }
     }
 

@@ -39,7 +39,7 @@ $auth = new AuthController();
                             <?php
                         endforeach;
                         ?>
-                        <li>
+                        <li style="height: 50px;">
                             <?php
                             $auth->showLoginOptions();
                             ?>
