@@ -1,6 +1,6 @@
 
 <div class="card flex-shrink-0 mb-2" style="width: 17rem; height: 315px;">
-            <img src="../public/assets/img/thumbnail.png" class="card-img-top" alt="...">
+            <img src="./public/assets/img/thumbnail.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">
                     <?= $OBJ->event_name ?>

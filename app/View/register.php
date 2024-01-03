@@ -1,8 +1,8 @@
 <?php include_once '../app/View/includes/head.php' ?>
 <body>
     <div class="container d-flex justify-content-center w-full mt-8" style="height: 600px;">
-        <div class="d-flex mt-8 w-full col-md-4 align-items-center">
-            <form class="form-control shadow" id="registrationForm" action="./registration" method="post" novalidate>
+        <div class="d-flex mt-8 w-full col-md-4 align-items-center" style="width:500px">
+            <form class="p-4 shadow" id="registrationForm" action="./registration" method="post" style="width:500px" novalidate>
                 <div class="mb-3">
                     <label for="firstname" class="form-label">Nom </label>
                     <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nom " required>
