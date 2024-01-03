@@ -28,12 +28,12 @@ class ReservationController
         return $rs ? true : false;
     }
     public function cancelReservation() {
-        $rs = $this->reserveModel->cancelReservation($this->user_id, $_POST['event_id']);
+        $rs = $this->reserveModel->cancelReservation();
         return $rs ? true : false;
     }
     public function alreadyReservedCheck()
     {
-        $rs = $this->reserveModel->getReservationByUserId($this->user_id);
+        $rs = $this->reserveModel->getReservationByUserId();
         if (!$rs) {
             include_once (__DIR__ . "/../View/includes/partials/reservationForm.php");
         } else {

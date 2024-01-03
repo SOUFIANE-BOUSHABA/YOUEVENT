@@ -94,17 +94,17 @@ class ReservationModel
         $stmt->bindParam(":id", $ticket_id, PDO::PARAM_INT);
         return $stmt->execute() ? true : false;
     }
-    public function cancelReservation($reserve_id)
+    public function cancelReservation()
     {
-        $result = $this->restoreTickets();
+        $reserve = $this->getReserveByUserId();
+        $result = $this->restoreTickets($reserve);
         $rs = $this->delReservation();
-        $data = $this->delReserve($reserve_id);
+        $data = $this->delReserve($reserve->id_reserv);
 
         return ($result && $rs && $data) ? true : false;
     }
-    public function restoreTickets()
+    public function restoreTickets($reserve)
     {
-        $reserve = $this->getReserveByUserId();
         $ticket = $this->ticketsLeft($reserve->id_ticket, 2);
         $result = $this->updTicket($reserve->id_ticket, $ticket->t_left);
         return ($result) ? true : false;

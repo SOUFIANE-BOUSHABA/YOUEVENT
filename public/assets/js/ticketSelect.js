@@ -22,7 +22,11 @@ class ticketSelect {
         });
     }
     displayTicketPrices() {
-        this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$';
+        if (this.qnt !== null) {
+            this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$';
+        } else {
+            this.ticketPrice.innerText = 'OUT OF STOCK';
+        }
     }
     ChangeTicketPrice() {
         this.qntPlaceHolder = document.getElementById('ticket_quant');
