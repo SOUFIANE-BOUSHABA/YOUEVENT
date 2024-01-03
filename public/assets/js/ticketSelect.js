@@ -22,8 +22,8 @@ class ticketSelect {
         });
     }
     displayTicketPrices() {
-        if (this.qnt !== null) {
-            this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$';
+        if (this.qnt !== 0 && this.qnt !== null) {
+            this.ticketPrice.innerText = 'Price: ' + this.fullPrice + '$ - ' + this.qnt + ' IN STOCK';
         } else {
             this.ticketPrice.innerText = 'OUT OF STOCK';
         }
