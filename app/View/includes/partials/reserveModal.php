@@ -12,7 +12,7 @@ $ticket = new TicketController();
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" class="d-flex flex-column">
+                <form action="/YOUEVENT/" method="post" class="d-flex flex-column">
                     <div class="mb-3 container">
                         <div class="form-floating mb-3">
                             <input class="form-control" name="reserv_name" type="text" placeholder="Reservation name"
