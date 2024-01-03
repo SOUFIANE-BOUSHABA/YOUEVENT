@@ -5,7 +5,7 @@ use Router;
 
 require(__DIR__ . "/../Model/EventModel.php");
 
-use App\Model\EventModal;
+use App\Model\EventModel;
 
 class EventController
 {
@@ -13,7 +13,7 @@ class EventController
     private $router;
     public function __construct()
     {
-        $this->eventModal = new EventModal();
+        $this->eventModal = new EventModel();
         $this->router = new Router();
     }
     public function showEvents()
@@ -28,6 +28,9 @@ class EventController
             echo 'No upcoming events at the moment!';
         }
     }
+
+
+
     public function getEventUri() {
         return explode("/", parse_url($_SERVER['QUERY_STRING'], PHP_URL_PATH));
     }
@@ -44,4 +47,5 @@ class EventController
     public function eventNameChanger($event_name) {
         return $eventName = str_replace('_', ' ', $event_name);
     }
+
 }

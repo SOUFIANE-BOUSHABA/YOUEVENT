@@ -5,7 +5,7 @@ namespace App\Model;
 use PDO;
 use App\Database\Database;
 
-class EventModal
+class EventModel
 {
     private $sql;
     private $db;
