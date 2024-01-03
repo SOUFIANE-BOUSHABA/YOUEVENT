@@ -24,9 +24,8 @@ class ReservationController
     }
     public function makeReservation()
     {
-        $data = $this->reserveModel->reserve($_POST['reserv_name'], $_POST['reserv_desc'], $this->user_id);
-        $rs = $this->reserveModel->linkTicket($_POST['user_ticket'], $_POST['ticket_quant'], $this->user_id);
-        return ($data && $rs) ? true : false;
+        $rs = $this->reserveModel->makeReservation($_POST['reserv_name'], $_POST['reserv_desc'] ,$_POST['user_ticket'], $_POST['ticket_quant']);
+        return $rs ? true : false;
     }
     public function cancelReservation() {
         $rs = $this->reserveModel->cancelReservation($this->user_id, $_POST['event_id']);

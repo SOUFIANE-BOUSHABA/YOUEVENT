@@ -28,7 +28,7 @@ $ticket = new TicketController();
                         </div>
                     </div>
                     <div class="mb-3 container d-flex justify-content-center">
-                        <select class="form-select w-75" style="width: 150px;" name="user_ticket" id="ticket_select"
+                        <select class="form-select" style="width: 150px;" name="user_ticket" id="ticket_select"
                             required>
                             <option selected hidden disabled>Ticket Type</option>
                             <?php

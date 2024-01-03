@@ -39,11 +39,13 @@ $auth = new AuthController();
                             <?php
                         endforeach;
                         ?>
+                        <li>
+                            <?php
+                            $auth->showLoginOptions();
+                            ?>
+                        </li>
                     </ul>
                 </nav>
-                <?php
-                $auth->showLoginOptions();
-                ?>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
