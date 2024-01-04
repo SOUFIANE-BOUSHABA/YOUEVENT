@@ -20,7 +20,8 @@ class EventController
     public function showEvents()
     {
         if (isset($_POST['searchSubmit'])) {
-            $rs = $this->eventModal->getEventsBySearchName($_POST['search']);
+            $term = $this->cleanSearch($_POST['search']);
+            $rs = $this->eventModal->getEventsBySearchName($term);
             $i = 0;
             if ($rs) {
                 foreach ($rs as $OBJ):

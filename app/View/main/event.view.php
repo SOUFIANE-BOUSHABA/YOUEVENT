@@ -20,7 +20,7 @@ $event = new EventController();
             </div>
             <div class="row container d-flex mb-2 justify-content-center">
                 <div class="col-lg-6">
-                    <form method="post" class="d-flex gap-1">
+                    <form action="/YOUEVENT/user/events" method="post" class="d-flex gap-1">
                         <input type="search" name="search" class="form-control" placeholder="Search for an event..">
                         <button class="btn btn-primary" type="submit" name="searchSubmit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
