@@ -38,8 +38,13 @@ $event = new EventController();
                     <div class="card border-0 mb-4">
                         <div class="card-body p-0 d-flex gap-2" style="flex-wrap: wrap; margin-left: 30px;">
                             <?php
-                            $event->showEvents();
+                            $i = $event->showEvents();
                             ?>
+                        </div>
+                        <div class="row text-center mt-2">
+                            <p>
+                                <?= $i ?> Event(s) Found!
+                            </p>
                         </div>
                     </div>
                 </div>

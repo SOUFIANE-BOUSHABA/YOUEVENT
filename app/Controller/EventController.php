@@ -21,21 +21,27 @@ class EventController
     {
         if (isset($_POST['searchSubmit'])) {
             $rs = $this->eventModal->getEventsBySearchName($_POST['search']);
+            $i = 0;
             if ($rs) {
                 foreach ($rs as $OBJ):
                     $eventName = str_replace('_', ' ', $OBJ->event_name);
                     include(__DIR__ . "/../View/includes/partials/eventCard.php");
+                    $i++;
                 endforeach;
+                return $i;
             } else {
                 echo 'Event was not Found!';
             }
         } else {
             $rs = $this->eventModal->getEvents();
             if ($rs) {
+                $i = 0;
                 foreach ($rs as $OBJ):
                     $eventName = str_replace('_', ' ', $OBJ->event_name);
                     include(__DIR__ . "/../View/includes/partials/eventCard.php");
+                    $i++;
                 endforeach;
+                return $i;
             } else {
                 echo 'No upcoming events at the moment!';
             }

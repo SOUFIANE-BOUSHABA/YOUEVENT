@@ -1,37 +1,32 @@
+<?php
+$base_url = "http://localhost/";
+$src = "YOUEVENT/public/assets/js/";
+$href = "YOUEVENT/public/assets/img/partner-logo/";
+?>
 <!-- Footer Section Begin -->
 <footer class="footer-section">
     <div class="container">
         <div class="partner-logo owl-carousel">
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-1.png" alt="">
-                </div>
-            </a>
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-2.png" alt="">
-                </div>
-            </a>
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-3.png" alt="">
-                </div>
-            </a>
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-4.png" alt="">
-                </div>
-            </a>
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-5.png" alt="">
-                </div>
-            </a>
-            <a href="#" class="pl-table">
-                <div class="pl-tablecell">
-                    <img src="../../assets/img/partner-logo/logo-6.png" alt="">
-                </div>
-            </a>
+            <?php
+            $img = [
+
+                "logo-1.png",
+                "logo-2.png",
+                "logo-3.png",
+                "logo-4.png",
+                "logo-5.png",
+                "logo-6.png",
+            ];
+            foreach ($img as $i):
+                ?>
+                <a href="#" class="pl-table">
+                    <div class="pl-tablecell">
+                        <img src="<?= $base_url . $href . $i ?>">
+                    </div>
+                </a>
+                <?php
+            endforeach;
+            ?>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -87,8 +82,6 @@
     crossorigin="anonymous"></script>
 
 <?php
-$base_url = "http://localhost/";
-$src = "YOUEVENT/public/assets/js/";
 
 $assets = [
     "jquery-3.3.1.min.js",
@@ -98,9 +91,9 @@ $assets = [
     "owl.carousel.min.js",
     "main.js",
     "ticketSelect",
-  ];
-foreach ($assets as $v) :
-echo "<script src='{$base_url}{$src}{$v}'></script>";
+];
+foreach ($assets as $v):
+    echo "<script src='{$base_url}{$src}{$v}'></script>";
 endforeach;
 ?>
 </body>
