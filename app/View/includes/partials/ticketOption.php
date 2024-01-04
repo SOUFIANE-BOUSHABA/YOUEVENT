@@ -1,0 +1,1 @@
+<option value="<?= $OBJ->ticket_id ?>" data-price="<?= $OBJ->ticket_price ?>" data-quantity="<?= $OBJ->ticket_left ?>"><?= $OBJ->ticket_name . " - [" . $OBJ->ticket_price . "$]" ?></option>
